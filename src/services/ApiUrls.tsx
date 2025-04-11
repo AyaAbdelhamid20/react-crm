@@ -27,4 +27,5 @@ export const UsersUrl = 'users'
 export const UserUrl = 'user'
 // PROFILE
 export const ProfileUrl = 'profile'
-// 
+//GoogleLoginStatusUrl
+export const GoogleLoginStatusUrl = 'auth/google-login';

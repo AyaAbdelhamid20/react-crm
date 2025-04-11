@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom'
 import Login from './pages/auth/Login';
 import { Home } from './pages/home/Home';
+import  AdminSettings from'./pages/admin/AdminSettings';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
           <Route path="*" element={<Home />} />
           <Route path="/app" element={<Home />} />
           <Route path='/login' element={<Login />} />
+          <Route path="/admin/settings" element={<AdminSettings />} />
           {/* <Route path="/" element={<Navigate to="/contacts" replace />} /> */}
           {/* <Route
             path='/'

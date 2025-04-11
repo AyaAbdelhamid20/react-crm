@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { AppBar, Avatar, Box, Drawer, IconButton, List, ListItem, ListItemIcon, Popover, Toolbar, Tooltip, Typography } from '@mui/material';
-import { FaAddressBook, FaBars, FaBriefcase, FaBuilding, FaChartLine, FaCog, FaDiceD6, FaHandshake, FaIndustry, FaSignOutAlt, FaTachometerAlt, FaUserFriends, FaUsers } from "react-icons/fa";
+import { FaAddressBook, FaBars, FaBriefcase, FaBuilding, FaChartLine, FaCog, FaDiceD6, FaHandshake, FaIndustry, FaSignOutAlt, FaTachometerAlt, FaTools, FaUserFriends, FaUsers } from "react-icons/fa";
 import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import { fetchData } from './FetchData';
 import { ProfileUrl } from '../services/ApiUrls';
@@ -218,6 +218,14 @@ export default function Sidebar(props: any) {
                                         <ListItemIcon > <FaIndustry fill='#3e79f7' /></ListItemIcon>
                                         <StyledListItemText primary={'Organization'} sx={{ ml: '-20px', color: '#3e79f7' }} />
                                     </StyledListItemButton>
+                                </ListItem>
+                                <ListItem disablePadding>
+                                <StyledListItemButton onClick={() => navigate('/admin/settings')}>
+                                <ListItemIcon>
+                                    <FaTools fill='#3e79f7' />
+                                </ListItemIcon>
+                                <StyledListItemText primary={'Admin Settings'} sx={{ ml: '-20px', color: '#3e79f7' }} />
+                                </StyledListItemButton>
                                 </ListItem>
                             </List>
                             {/* <Tooltip title='logout' sx={{ ml: '15px' }}>
